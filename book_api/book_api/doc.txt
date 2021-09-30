@@ -1,0 +1,41 @@
+estructura del proyecto
+
+book_api
+    1. app:user
+        -models.py: vamos a utilizar el modelos User que viene por default en 
+        django para crear usuarios.
+        -views.py: se necesita implementar tres funciones que manejen las siguientes
+        operaciones.
+            >Sign up: esta funcion implementara el registro de nuevos usuarios.
+            >Sign in: esta funcion implementara el ingreso de usuarios registrados.
+            >Logout: el usuario se retira de la aplicacion.
+        -forms.py: se necesita crear dos formas:
+            >SignupForm: maneja el datos que el usuario ingresa para crear un nuevo
+            usuario
+            >SigninForm: maneja la entrada de los datos necesarios para autenticar
+            al usuario.
+        -urls.py: necesitaremos dos rutas:
+            >ruta principal: url para la funcion Signin
+            >ruta secundaria: url para la funcion Signup
+
+            
+
+
+    2. app:main
+        -models.py: necesitamos dos modelos.
+            >book: id_book, title, publication date
+            >comment: id_comment, id_book, text, created_date, id_user
+        -forms.py: necesitamos dos formas:
+            >book_form: para manejar la busqueda del libro
+            >comment_form: para ingresar el comentario asociado al libro y usuario
+        -views.py se necesita implementar varias funciones.
+            >una que maneje la busqueda del libro mediante una peticion get al
+            api publica y luego cree un objeto dentro del modelo book con los datos
+            extraidos.
+            >una en la que se visualice los datos extraidos asociados al objeto anterior
+            y permita anadir un comentario que sera guardado en el modelo comment.
+            >una que convierta los datos extraidos en formato pdf y excel.
+            
+                  
+
+

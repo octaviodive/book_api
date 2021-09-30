@@ -1,0 +1,28 @@
+necesito una funcion que haga lo siguiente
+a)get_book_api
+1. hacer una solicitud con el metodo get a la api publica ''
+2. necesito extraer el id de la forma  
+3. necesito pasar el id de manera dinamica
+4. necesito concatenar el id a la url de la api
+5. necesito almacenar la response de la solitud en una varaibla
+6. necestio pasar la response por el metodo json() para obtener objecto python de tipo lista
+7. extraer del objeto los datos siguientes: id, title, publication_date y almacenarlos en variables
+8. crear un objeto en el modelo book con los datos que acabo de obtener
+9. redirigirme a la pagina detail.
+
+b)
+get:
+1. funcion que muestre el objeto book con sus atributos id title y publication-date
+2. que muestre una forma para introducir texto
+3. extraer el pk del objeto book
+post:
+3. obtener el texto de la forma y guardarlo en el modelo comment.text
+4. pasar el pk del objeto book
+5. crear un objeto comment asociado al objeto book
+6. redirigirme a la misma pagina
+  
+
+
+
+
+

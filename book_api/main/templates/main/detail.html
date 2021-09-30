@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="text-center">
+  <h1>Book info</h1>
+  <h3>ID: {{book.id_book}}</h3>
+  <h3>Title: {{book.title}}</h3>
+  <h3>Publication date: {{book.publication_date}}</h3>
+  
+  <p></p>
+  <p></p>   
+  <form method="POST">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <input type="submit" name="comment" class="btn btn-warning">
+    </form>
+  
+  <br>
+  <br>
+  <p>
+    <a href="{% url 'main:home' %}" class="btn btn-outline-dark btn-sm m-1">Home</a>
+    <a href="{% url 'main:csv_file' book.id_book %}" class="btn btn-outline-dark btn-sm m-1">CSV File</a>
+    <a href="{% url 'main:pdf_file' book.id_book %}" class="btn btn-outline-dark btn-sm m-1">PDF File</a>
+  </p>  
+  </div>
+{% endblock %}

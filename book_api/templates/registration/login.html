@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Log In
+{% endblock %}
+
+{% block content %}
+  <div class="text-center">
+    <h1 class="display-4 fw-bold lh-1 mb-3">Book Api</h1>
+    <hr class="my-4">
+    <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" >{% csrf_token %}
+      {{ form|crispy }}
+      <hr />
+      <button class="btn btn-warning" type="submit">Log In</button>
+      <hr class="my-4">
+    	<a href="{% url 'user:signup' %}" class=" btn btn-success" role="button" aria-pressed="true">Create New Account</a>
+    </form>
+  </div>
+{% endblock %}
+
